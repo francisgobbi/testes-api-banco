@@ -15,20 +15,21 @@ public class BuscarUsuarioParaAutenticacaoTest {
         baseURI = ("https://dummyjson.com");
         basePath = "";
 
-        String token = given()
+        given()
                 .contentType(ContentType.JSON)
                 .body("{\n" +
                         "    \"username\": \"kminchelle\",\n" +
                         "    \"password\": \"0lelplR\"\n" +
                         "}")
-                .when()
+       .when()
                 .post("/auth/login")
 
-                .then()
-                .extract()
-                .path("token");
+       .then()
+                .log().all()
+                .assertThat()
+                    .statusCode(201).toString();
 
 
-        System.out.println(token);
+
     }
 }

@@ -28,27 +28,31 @@ Este é um repositório que contém a automação de alguns testes de API Rest d
 
 ## Testes Automatizados
 
-Teste para  buscar o status da aplicação
-ok
-
-Teste para buscar usuário para autenticação
-ok
-
-Teste para a criação de token para Autenticação
-ok
-
-Teste para buscar produtos com autenticação
+- Teste para  buscar o status da aplicação - ok
 
 
-Teste para validar o cadastro de um produto novo. Seguindo os padrões da regra de negócio.
-OK
+- Teste para buscar usuário para autenticação - Expected status code <201> but was <200>.
 
-Cadastrar/adicionar um produto novo.
-** Na documentação o Response - 201 OK
-No teste realizado o Response - 200 OK, diferente da docuementação.
 
-Consultar produtos cadastrados, atraves do seu ID
-OK
+- Teste para a criação de token para Autenticação -ok
+
+
+- Teste para buscar produtos com autenticação - ok
+
+
+- Teste para buscar todos os produtos na documentação no Request não precisa informar o token, mas precisa informar o token, realizei o teste informando o token e foi sucesso!
+
+
+- Teste para validar o cadastro de um produto novo. Seguindo os padrões da regra de negócio - ok
+
+
+- Cadastrar/adicionar um produto novo.
+Na documentação o Response - 201 OK
+No teste realizado o Response - 200 OK, diferente da documentação da API.
+  Expected status code <201> but was <200>.
+
+
+- Consultar produtos cadastrados, atraves do seu ID - ok
 
 ## Notas Gerais
 

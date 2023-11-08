@@ -16,28 +16,29 @@ public class BuscarTodosOsProdutosTest {
         basePath = "";
 
         String token = given()
-                     .contentType(ContentType.JSON)
-                     .body("{\n" +
+                 .contentType(ContentType.JSON)
+                 .body("{\n" +
                         "    \"username\": \"kminchelle\",\n" +
                         "    \"password\": \"0lelplR\"\n" +
                         "}")
-                .when()
-                     .post("/auth/login")
+        .when()
+                 .post("/auth/login")
 
-                .then()
-                    .extract()
+        .then()
+                 .extract()
                         .path("token");
 
-        System.out.println(token);
-        given()
-                        .contentType(ContentType.JSON)
-                        .body(token)
 
-                .when()
-                        .get("auth/products")
-                .then()
-                        .extract()
-                                .path("products");
+        given()
+                 .contentType(ContentType.JSON)
+                 .header("Authorization",token)
+
+       .when()
+                .get("auth/products")
+       .then()
+                .log().all()
+                .assertThat()
+                .statusCode(200).toString();
 
     }
 
