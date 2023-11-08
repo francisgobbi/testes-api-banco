@@ -25,6 +25,11 @@ Este é um repositório que contém a automação de alguns testes de API Rest d
 - Postman
   https://www.postman.com/
 
+##	Configurações de pastas do projeto:
+
+##  Folder project:
+
+- A pasta **src** tem a seguinte estrutura informada, **test** --> **java** --> **ModulosAPI**, **Test**, para cada funcionalidade da API.
 
 ## Testes Automatizados
 
