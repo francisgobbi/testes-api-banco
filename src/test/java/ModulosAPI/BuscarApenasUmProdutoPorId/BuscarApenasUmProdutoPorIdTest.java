@@ -25,6 +25,5 @@ public class BuscarApenasUmProdutoPorIdTest {
                 .log().all()
                 .assertThat()
                     .statusCode(200).toString();
-
     }
 }

@@ -6,6 +6,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
+import static java.lang.Math.log;
 
 @DisplayName("Testes de API Rest buscar Produtos com autenticacao")
 public class BuscarProdutosComAutenticacaoTest {
@@ -13,18 +14,31 @@ public class BuscarProdutosComAutenticacaoTest {
     @Test
     @DisplayName("Buscar produtos com autenticacao")
     public void testValidarABuscaPorIdEntaoObtenhoStatusCode200(){
-        baseURI = ("https://dummyjson.com/auth/products");
+        baseURI = ("https://dummyjson.com/");
         basePath = "";
+
+        String token = given()
+                         .contentType(ContentType.JSON)
+                         .body("{\n" +
+                                   "    \"username\": \"kminchelle\",\n" +
+                                   "    \"password\": \"0lelplR\"\n" +
+                                   "}")
+                .when()
+                     .post("/auth/login")
+
+                .then()
+                        .extract()
+                            .path("token");
 
               given()
                         .contentType(ContentType.JSON)
-                        .body("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsInVzZXJuYW1lIjoia21pbmNoZWxsZSIsImVtYWlsIjoia21pbmNoZWxsZUBxcS5jb20iLCJmaXJzdE5hbWUiOiJKZWFubmUiLCJsYXN0TmFtZSI6IkhhbHZvcnNvbiIsImdlbmRlciI6ImZlbWFsZSIsImltYWdlIjoiaHR0cHM6Ly9yb2JvaGFzaC5vcmcvYXV0cXVpYXV0LnBuZyIsImlhdCI6MTY5OTM5ODMwNCwiZXhwIjoxNjk5NDAxOTA0fQ.GFLdCZbs6Qhx6qWrByiI-SnwzcTnmZ17tYky-pepc-U")
+                        .header("Authorization",token)
               .when()
-                        .get()
+                        .get("auth/products")
 
               .then()
                         .log().all()
                         .assertThat()
-                        .statusCode(200).toString();
+                            .statusCode(200).toString();
     }
 }
