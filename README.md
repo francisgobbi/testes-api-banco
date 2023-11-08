@@ -77,7 +77,7 @@ No teste realizado o Response - 200 OK, diferente da documentação da API.
 - - mvn install
 
 ## Melhorias, caso seja identificado;
--- Docuemntação da API em Swagger. 
+-- Documentação da API em Swagger. 
 
 ## Notas Gerais
 
