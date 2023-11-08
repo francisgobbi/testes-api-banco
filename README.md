@@ -59,6 +59,20 @@ No teste realizado o Response - 200 OK, diferente da documentação da API.
 
 - Consultar produtos cadastrados, atraves do seu ID - ok
 
+## Observação - Como executar
+- O saldo atual das contas sera exibido no momento da execução.
+- Para clonar o projeto BugBank em seu computador e executar, realize estes passos abaixo :
+- - Open Git Bash here
+- - Digitar: git clone https://gitlab.com/projeto-de-teste-automatizado/desafiotecnicoqasicredi.git
+- - Projeto sera clonado no seu computador.
+- Para executar o projeto, realize estes passo :
+- - Maven no IntelliJ
+- - Reload all Maven Project
+- - Executar a funcão na pasta **src** -> **test** -> **java** -->  **ModulosAPI** -->  BuscarApenasUmProdutoPorIdTest , BuscarProdutosComAutenticacaoTest, BuscarStatusDaAplicacaoTest, BuscarTodosOsProdutosTest, BuscarUsuarioParaAutenticacaoTest, CriacaoDeTokenParaAutenticacaoTest, CriarProdutoTest  
+
+- Caso não conseguir executar o projeto com sucesso, realize os passos abaixo:
+- - mvn clean
+- - mvn install
 ## Notas Gerais
 
 - Neste projeto fizemos o uso do JUnit 5, o que nos da possibilidade de usar anotações DisplayName para dar descrições em português para nossos testes.
