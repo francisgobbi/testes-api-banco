@@ -14,7 +14,7 @@ public class NegativeTests {
 
 
     @Test
-    @DisplayName("Buscar Apenas Um Produto Por um Id")
+    @DisplayName("Buscar Apenas Um Produto Por um Id - Negative")
     public void testDadoUsuarioQuandoTenhoCadastradoUmProdutoEBuscoPorUmIdEntaoObtenhoStatusCode200(){
         baseURI = ("https://dummyjson.com/products/0");
         basePath = "";
@@ -30,16 +30,16 @@ public class NegativeTests {
 
         Response response = given().contentType("application/json").get(baseURI);
         ExtentReports extent = new ExtentReports();
-        ExtentSparkReporter spark = new ExtentSparkReporter("Report/" + "Buscar apenas um produto por id - Status Code " + response.getStatusCode() + ".html");
+        ExtentSparkReporter spark = new ExtentSparkReporter("Report/" + "Buscar apenas um produto por id negativo - Status Code " + response.getStatusCode() + ".html");
         extent.attachReporter(spark);
 
         if (response.getStatusCode() == 404) {
-            extent.createTest("Teste Buscar apenas um produto por id - Status Code " + response.getStatusCode())
-                    .log(Status.PASS, "Teste buscar apenas um produto por id, Passed!");
+            extent.createTest("Teste Buscar apenas um produto por id negativo - Status Code " + response.getStatusCode())
+                    .log(Status.PASS, "Teste buscar apenas um produto por id negativo, Passed!");
             extent.flush();
         } else {
-            extent.createTest("Teste buscar apenas um produto por id - Status Code " + response.getStatusCode())
-                    .log(Status.FAIL, "Teste buscar apenas um produto por id, Fail!");
+            extent.createTest("Teste buscar apenas um produto por id negativo - Status Code " + response.getStatusCode())
+                    .log(Status.FAIL, "Teste buscar apenas um produto por id negativo, Fail!");
             extent.flush();
         }
     }
