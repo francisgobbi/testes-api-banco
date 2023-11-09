@@ -29,6 +29,5 @@ public class CriacaoDeTokenParaAutenticacaoTest {
                     .assertThat()
                         .statusCode(201).toString();
 
-        System.out.println(token);
     }
 }
