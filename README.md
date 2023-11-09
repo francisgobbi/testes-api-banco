@@ -72,7 +72,8 @@ No teste realizado o Response - 200 OK, diferente da documentação da API.
 - Para executar o projeto, realize estes passo :
 - - Maven no IntelliJ
 - - Reload all Maven Project
-- - Executar a funcão na pasta **src** -> **test** -> **java** -->  **ModulosAPI** -->  BuscarApenasUmProdutoPorIdTest , BuscarProdutosComAutenticacaoTest, BuscarStatusDaAplicacaoTest, BuscarTodosOsProdutosTest, BuscarUsuarioParaAutenticacaoTest, CriacaoDeTokenParaAutenticacaoTest, CriarProdutoTest  
+- - Executar a funcão na pasta **src** -> **test** -> **java** -->  **TestCases** -->  BuscarApenasUmProdutoPorIdTest , BuscarProdutosComAutenticacaoTest, BuscarStatusDaAplicacaoTest, BuscarTodosOsProdutosTest, BuscarUsuarioParaAutenticacaoTest, CriacaoDeTokenParaAutenticacaoTest, CriarProdutoTest
+- - Executar a funcão na pasta **src** -> **test** -> **java** -->  **TestSuites** --> **AllTest**, **NegativeTest**, **PositiveTest**
 
 - Caso não conseguir executar o projeto com sucesso, realize os passos abaixo:
 - - mvn clean
