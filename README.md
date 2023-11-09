@@ -66,14 +66,15 @@ No teste realizado o Response - 200 OK, diferente da documentação da API.
 - Para clonar o projeto BugBank em seu computador e executar, realize estes passos abaixo :
 - - Open Git Bash here
 - - Digitar: git clone https://gitlab.com/projeto-de-teste-automatizado/desafiotecnicoqasicredi.git
-- - 
-- Projeto sera clonado no seu computador.
+- -
+- - Projeto sera clonado no seu computador.
 - 
 - Para executar o projeto, realize estes passo :
-- - Maven no IntelliJ
-- - Reload all Maven Project
-- - Executar a funcão na pasta **src** -> **test** -> **java** -->  **TestCases** -->  BuscarApenasUmProdutoPorIdTest , BuscarProdutosComAutenticacaoTest, BuscarStatusDaAplicacaoTest, BuscarTodosOsProdutosTest, BuscarUsuarioParaAutenticacaoTest, CriacaoDeTokenParaAutenticacaoTest, CriarProdutoTest
-- - Executar a funcão na pasta **src** -> **test** -> **java** -->  **TestSuites** --> **AllTest**, **NegativeTest**, **PositiveTest**
+- - Maven no IntelliJ.
+- - Reload all Maven Project.
+- - Executar a funcão na pasta **src** -> **test** -> **java** -->  **TestCases** -->  BuscarApenasUmProdutoPorIdTest , BuscarProdutosComAutenticacaoTest, BuscarStatusDaAplicacaoTest, BuscarTodosOsProdutosTest, BuscarUsuarioParaAutenticacaoTest, CriacaoDeTokenParaAutenticacaoTest, CriarProdutoTest.
+- - Executar a funcão na pasta **src** -> **test** -> **java** -->  **TestSuites** --> **AllTest**, **NegativeTest**, **PositiveTest**.
+
 
 - Caso não conseguir executar o projeto com sucesso, realize os passos abaixo:
 - - mvn clean
