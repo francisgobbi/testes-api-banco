@@ -29,7 +29,7 @@ Este é um repositório que contém a automação de alguns testes de API Rest d
 
 ##  Folder project:
 
-- A pasta **src** tem a seguinte estrutura informada, **test** --> **java** --> **TestCases**, **TestSuites**, **Test**, para cada funcionalidade da API.
+- A pasta **src** tem a seguinte estrutura informada, **test** --> **java** --> **TestCases**, **TestSuites**, **Test** para cada funcionalidade da API.
 - 
 - A pasta **Report** tem o report de cada teste gerado em tempo de execução.
 - 
