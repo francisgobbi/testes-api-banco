@@ -1,6 +1,10 @@
 package ModulosAPI.BuscarStatusDaAplicacao;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.*;
@@ -24,9 +28,23 @@ public class BuscarStatusDaAplicacaoTest {
                 .get()
 
             .then()
-                .log().all()
-                .assertThat()
-                    .statusCode(200).toString();
-    }
+                .log().all();
 
+        Response response = given().contentType("application/json").get(baseURI);
+        ExtentReports extent = new ExtentReports();
+        ExtentSparkReporter spark = new ExtentSparkReporter("Report/"+"Buscar o status da aplicação - "+ response.getStatusCode() + ".html");
+        extent.attachReporter(spark);
+
+        if (response.getStatusCode() == 200) {
+            extent.createTest("Teste buscar o status da aplicação - Status Code " + response.getStatusCode())
+                    .log(Status.PASS, "Teste buscar o status da aplicação, Passed!");
+            extent.flush();
+        } else {
+            extent.createTest("Teste buscar o status da aplicação - Status Code " + response.getStatusCode())
+                    .log(Status.FAIL, "Teste Criar Produto, Fail!");
+            extent.flush();
+        }
+    }
 }
+
+
