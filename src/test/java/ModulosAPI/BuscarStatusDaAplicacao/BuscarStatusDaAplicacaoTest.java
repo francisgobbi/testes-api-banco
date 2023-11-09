@@ -10,11 +10,11 @@ import static io.restassured.RestAssured.*;
 public class BuscarStatusDaAplicacaoTest {
     @Test
     @DisplayName("Buscar status da Aplicação")
-    public void testValidarABuscaPorIdEntaoObtenhoStatusCode200(){
+    public void testDadoUsuarioQuandoAcessoApiEntaoObtenhoStatusCode200(){
         baseURI = ("https://dummyjson.com/test");
         basePath = "";
 
-        String statusAplicao = given()
+             given()
                 .contentType(ContentType.JSON)
                 .body("{\n" +
                         "    \"status\": \"ok\",\n" +
@@ -26,7 +26,7 @@ public class BuscarStatusDaAplicacaoTest {
             .then()
                 .log().all()
                 .assertThat()
-                .statusCode(200).toString();
+                    .statusCode(200).toString();
     }
 
 }

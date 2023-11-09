@@ -11,7 +11,7 @@ public class BuscarTodosOsProdutosTest {
 
     @Test
     @DisplayName("Buscar todos produtos")
-    public void testBuscarTodosProdutos() {
+    public void testDadoUsuarioQuandoEfetuoLoginNaApiEtenhoTokenEntaoObtenhoStatusCode200() {
         baseURI = ("https://dummyjson.com");
         basePath = "";
 

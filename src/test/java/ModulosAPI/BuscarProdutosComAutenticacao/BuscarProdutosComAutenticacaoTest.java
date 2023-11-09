@@ -13,7 +13,7 @@ public class BuscarProdutosComAutenticacaoTest {
 
     @Test
     @DisplayName("Buscar produtos com autenticacao")
-    public void testValidarABuscaPorIdEntaoObtenhoStatusCode200(){
+    public void testDadoUmUsuarioQuandoLogoNaApiEGeradoTokenEMostradosOsProdutosCadastradosEntaoObtenhoStatusCode200(){
         baseURI = ("https://dummyjson.com/");
         basePath = "";
 

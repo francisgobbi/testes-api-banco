@@ -11,7 +11,7 @@ public class BuscarUsuarioParaAutenticacaoTest {
 
     @Test
     @DisplayName("Buscar usuario para autenticação")
-    public void testBuscarUsuarioParaAutenticacao() {
+    public void testDadoUsuarioQuandoEfetuoLoginNaApiEntaoObtenhoStatusCode201() {
         baseURI = ("https://dummyjson.com");
         basePath = "";
 
@@ -28,8 +28,5 @@ public class BuscarUsuarioParaAutenticacaoTest {
                 .log().all()
                 .assertThat()
                     .statusCode(201).toString();
-
-
-
     }
 }

@@ -11,7 +11,7 @@ import static io.restassured.RestAssured.*;
 public class CriarProdutoTest {
     @Test
     @DisplayName("Criar Produto")
-    public void testCriarProduto() {
+    public void testDadoUsuarioQuandoCadastroUmProdutoEntaoObtenhoStatusCode201() {
         baseURI = ("https://dummyjson.com");
         basePath = "";
 

@@ -11,7 +11,7 @@ public class CriacaoDeTokenParaAutenticacaoTest {
 
     @Test
     @DisplayName("Criar Token")
-    public void testCriarToken() {
+    public void testDadoUsuarioQuandoEfetuoLoginNaApiEntaoObtenhoStatusCode201() {
         baseURI = ("https://dummyjson.com");
         basePath = "";
 
@@ -25,9 +25,9 @@ public class CriacaoDeTokenParaAutenticacaoTest {
                     .post("/auth/login")
 
                 .then()
-                    .extract()
-                         .path("token");
-
+                    .log().all()
+                    .assertThat()
+                        .statusCode(201).toString();
 
         System.out.println(token);
     }

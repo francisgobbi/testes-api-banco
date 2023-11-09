@@ -36,7 +36,7 @@ Este é um repositório que contém a automação de alguns testes de API Rest d
 - Teste para  buscar o status da aplicação - ok
 
 
-- Teste para buscar usuário para autenticação - Expected status code <201> but was <200>.
+- Teste para buscar token do usuário para autenticação - Expected status code <201> but was <200>.
 
 
 - Teste para a criação de token para Autenticação -ok
