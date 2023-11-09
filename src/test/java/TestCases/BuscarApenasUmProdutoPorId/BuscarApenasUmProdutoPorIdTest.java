@@ -15,7 +15,7 @@ public class BuscarApenasUmProdutoPorIdTest {
     @Test
     @DisplayName("Buscar Apenas Um Produto Por um Id")
     public void testDadoUsuarioQuandoTenhoCadastradoUmProdutoEBuscoPorUmIdEntaoObtenhoStatusCode200(){
-        baseURI = ("https://dummyjson.com/products/0");
+        baseURI = ("https://dummyjson.com/products/75");
         basePath = "";
 
        given()
