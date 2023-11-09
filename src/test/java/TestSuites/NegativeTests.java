@@ -1,4 +1,4 @@
-package ModulosAPI.BuscarApenasUmProdutoPorId;
+package TestSuites;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
@@ -7,10 +7,11 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
 import static io.restassured.RestAssured.*;
 
-@DisplayName("Testes de API Rest modulo de Produto")
-public class BuscarApenasUmProdutoPorIdTest {
+public class NegativeTests {
+
 
     @Test
     @DisplayName("Buscar Apenas Um Produto Por um Id")
@@ -18,13 +19,13 @@ public class BuscarApenasUmProdutoPorIdTest {
         baseURI = ("https://dummyjson.com/products/0");
         basePath = "";
 
-       given()
-              .contentType(ContentType.JSON)
-              .body("")
-       .when()
-             .get("")
+        given()
+                .contentType(ContentType.JSON)
+                .body("")
+                .when()
+                .get("")
 
-       .then()
+                .then()
                 .log().all();
 
         Response response = given().contentType("application/json").get(baseURI);

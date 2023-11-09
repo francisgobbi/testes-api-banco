@@ -1,4 +1,4 @@
-package ModulosAPI.BuscarUsuarioParaAutenticacao;
+package TestCases.BuscarUsuarioParaAutenticacao;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;

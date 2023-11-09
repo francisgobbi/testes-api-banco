@@ -1,4 +1,4 @@
-package ModulosAPI.BuscarProdutosComAutenticacao;
+package TestCases.BuscarProdutosComAutenticacao;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;

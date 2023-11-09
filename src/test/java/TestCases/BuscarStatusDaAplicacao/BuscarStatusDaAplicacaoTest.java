@@ -1,4 +1,4 @@
-package ModulosAPI.BuscarStatusDaAplicacao;
+package TestCases.BuscarStatusDaAplicacao;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;

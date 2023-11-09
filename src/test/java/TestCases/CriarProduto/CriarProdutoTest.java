@@ -1,4 +1,4 @@
-package ModulosAPI.CriarProduto;
+package TestCases.CriarProduto;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;

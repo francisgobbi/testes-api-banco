@@ -1,4 +1,4 @@
-package ModulosAPI.CriacaoDeTokenParaAutenticacao;
+package TestCases.CriacaoDeTokenParaAutenticacao;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
