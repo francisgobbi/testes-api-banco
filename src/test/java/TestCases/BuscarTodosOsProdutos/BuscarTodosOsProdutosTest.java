@@ -38,7 +38,7 @@ public class BuscarTodosOsProdutosTest {
                  .header("Authorization",token)
 
        .when()
-                .get("auth/products")
+                .get("/products")
        .then()
                 .log().all();
 
