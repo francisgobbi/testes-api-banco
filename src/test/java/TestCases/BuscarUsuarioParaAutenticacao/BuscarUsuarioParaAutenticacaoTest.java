@@ -26,7 +26,7 @@ public class BuscarUsuarioParaAutenticacaoTest {
                         "    \"password\": \"0lelplR\"\n" +
                         "}")
        .when()
-                .get("/users")
+                .post("auth/login")
 
        .then()
                 .log().all();
