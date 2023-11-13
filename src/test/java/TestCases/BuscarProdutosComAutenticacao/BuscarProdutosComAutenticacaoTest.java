@@ -27,10 +27,10 @@ public class BuscarProdutosComAutenticacaoTest {
                                    "    \"username\": \"kminchelle\",\n" +
                                    "    \"password\": \"0lelplR\"\n" +
                                    "}")
-                .when()
+             .when()
                      .post("/auth/login")
 
-                .then()
+             .then()
                         .extract()
                             .path("token");
 

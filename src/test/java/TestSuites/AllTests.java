@@ -22,10 +22,10 @@ public class AllTests {
         given()
                 .contentType(ContentType.JSON)
                 .body("")
-                .when()
+        .when()
                 .get("")
 
-                .then()
+        .then()
                 .log().all();
 
         Response response = given().contentType("application/json").get(baseURI);
@@ -66,10 +66,10 @@ public class AllTests {
         given()
                 .contentType(ContentType.JSON)
                 .header("Authorization",token)
-                .when()
+        .when()
                 .get("auth/products")
 
-                .then()
+        .then()
                 .log().all() ;
 
         Response response = given().contentType("application/json").get(baseURI + "auth/products");
@@ -100,10 +100,10 @@ public class AllTests {
                         "    \"status\": \"ok\",\n" +
                         "    \"method\": \"GET\"\n" +
                         "}")
-                .when()
+        .when()
                 .get()
 
-                .then()
+        .then()
                 .log().all();
 
         Response response = given().contentType("application/json").get(baseURI);
@@ -178,11 +178,11 @@ public class AllTests {
                         "    \"username\": \"kminchelle\",\n" +
                         "    \"password\": \"0lelplR\"\n" +
                         "}")
-                .when()
-                .get("/users")
+        .when()
+               .post("auth/login")
 
-                .then()
-                .log().all();
+        .then()
+               .log().all();
 
         Response response = given().contentType("application/json").get(baseURI + "/auth/login");
         ExtentReports extent = new ExtentReports();
@@ -212,10 +212,10 @@ public class AllTests {
                         "    \"username\": \"kminchelle\",\n" +
                         "    \"password\": \"0lelplR\"\n" +
                         "}")
-                .when()
+        .when()
                 .post("/auth/login")
 
-                .then()
+        .then()
                 .log().all();
 
         Response response = given().contentType("application/json").get(baseURI + "/auth/login");
@@ -253,10 +253,10 @@ public class AllTests {
                         "   \"category\": \"fragrances\",\n" +
                         "   \"thumbnail\": \"https://i.dummyjson.com/data/products/11/thumnail.jpg\"\n" +
                         "}")
-                .when()
+        .when()
                 .post("/products/add")
 
-                .then()
+        .then()
                 .log().all();
 
         Response response = given().contentType("application/json").get(baseURI+"/products/add");
@@ -284,10 +284,10 @@ public class AllTests {
         given()
                 .contentType(ContentType.JSON)
                 .body("")
-                .when()
+        .when()
                 .get("")
 
-                .then()
+        .then()
                 .log().all();
 
         Response response = given().contentType("application/json").get(baseURI);

@@ -22,10 +22,10 @@ public class NegativeTests {
         given()
                 .contentType(ContentType.JSON)
                 .body("")
-                .when()
+        .when()
                 .get("")
 
-                .then()
+        .then()
                 .log().all();
 
         Response response = given().contentType("application/json").get(baseURI);
