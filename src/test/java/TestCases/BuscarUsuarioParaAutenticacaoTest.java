@@ -10,12 +10,12 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
 
-@DisplayName("Testes de API Rest buscar usuario para autenticacao")
+
 public class BuscarUsuarioParaAutenticacaoTest {
 
     @Test
-    @DisplayName("Buscar usuario para autenticação")
-    public void testBuscarUsuarioParaAutenticacao() {
+    @DisplayName("Testes de API Rest buscar usuario para autenticacao")
+    public void testDadoQueTenhoLoginESenhaQuandoLogoEntaoObtenhoTokenStatusCode201() {
         baseURI = ("https://dummyjson.com");
         basePath = "";
 

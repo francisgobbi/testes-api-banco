@@ -1,21 +1,21 @@
 package TestCases;
 
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
 
-@DisplayName("Testes de API Rest criar token para autenticação")
 public class CriacaoDeTokenParaAutenticacaoTest {
 
     @Test
-    @DisplayName("Criar Token")
-    public void testCriarToken() {
+    @DisplayName("Testes de API Rest criar token para autenticação")
+    public void testDadoQueTenhoLoginESenhaQuandoLogarEntaoObtenhoTokenStatusCode201() {
         baseURI = ("https://dummyjson.com");
         basePath = "";
 

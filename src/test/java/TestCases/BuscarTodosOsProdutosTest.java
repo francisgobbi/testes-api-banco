@@ -1,20 +1,20 @@
 package TestCases;
 
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
 
-@DisplayName("Testes de API Rest buscar todos produtos com autenticação")
 public class BuscarTodosOsProdutosTest {
 
     @Test
-    @DisplayName("Buscar todos produtos, apos autenticação")
+    @DisplayName("Testes de API Rest buscar todos produtos com autenticação")
     public void testDadoUsuarioQuandoObtenhoTokenEBuscoTodosProdutosEntaoObtenhoStatusCode200() {
         baseURI = ("https://dummyjson.com");
         basePath = "";

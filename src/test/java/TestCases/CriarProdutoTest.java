@@ -1,20 +1,21 @@
 package TestCases;
 
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
 
-@DisplayName("Testes de API Rest criar produto")
+
 public class CriarProdutoTest {
     @Test
-    @DisplayName("Criar Produto")
-    public void testCriarProduto() {
+    @DisplayName("Testes de API Rest criar produto")
+    public void testDadoCriarProdutoEntaoObtenhoStatusCode201() {
         baseURI = ("https://dummyjson.com");
         basePath = "";
 

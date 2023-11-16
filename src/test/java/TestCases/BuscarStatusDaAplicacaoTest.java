@@ -11,10 +11,9 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
 
-@DisplayName("Testes de API Rest buscar status da Aplicação")
 public class BuscarStatusDaAplicacaoTest {
     @Test
-    @DisplayName("Buscar status da Aplicação")
+    @DisplayName("Testes de API Rest buscar status da Aplicação")
     public void testValidarABuscaPorIdEntaoObtenhoStatusCode200(){
         baseURI = ("https://dummyjson.com/test");
         basePath = "";
