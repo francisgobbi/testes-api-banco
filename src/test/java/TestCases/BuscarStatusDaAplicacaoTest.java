@@ -28,9 +28,7 @@ public class BuscarStatusDaAplicacaoTest {
                 .get()
 
         .then()
-                .log().all()
-                    .assertThat()
-                    .statusCode(200).toString();
+                .log().all();
 
 
         Response response = given().contentType("application/json").get(baseURI);

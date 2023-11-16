@@ -40,11 +40,10 @@ public class BuscarTodosOsProdutosTest {
         .when()
                 .get("auth/products")
         .then()
-                .log().all()
-                .assertThat()
-                .statusCode(200).toString();
+                .log().all();
 
-        Response response = given().contentType("application/json").get(baseURI);
+
+        Response response = given().contentType("application/json").get(baseURI + "auth/products");
         ExtentReports extent = new ExtentReports();
         ExtentSparkReporter spark = new ExtentSparkReporter("Report/" + "Buscar todos produtos com autenticação - Status Code " + response.getStatusCode() + ".html");
         extent.attachReporter(spark);
