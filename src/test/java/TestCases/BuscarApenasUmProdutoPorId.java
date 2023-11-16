@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
 
-public class BuscarApenasUmProdutoPorIdTest {
+public class BuscarApenasUmProdutoPorId {
 
     @Test
     @DisplayName("Buscar Apenas Um Produto Por um Id")
