@@ -16,8 +16,8 @@ public class CriacaoDeTokenParaAutenticacaoTest {
     @Test
     @DisplayName("Testes de API Rest criar token para autenticação")
     public void testDadoQueTenhoLoginESenhaQuandoLogarEntaoObtenhoTokenStatusCode201() {
-        baseURI = ("https://dummyjson.com");
-        basePath = "";
+        baseURI = ("https://dummyjson.com/");
+        basePath="";
 
         given()
                 .contentType(ContentType.JSON)
@@ -26,12 +26,12 @@ public class CriacaoDeTokenParaAutenticacaoTest {
                         "    \"password\": \"0lelplR\"\n" +
                         "}")
         .when()
-                .post("/auth/login")
+                .post("auth/login")
 
         .then()
                 .log().all();
 
-        Response response = given().contentType("application/json").get(baseURI + "/auth/login");
+        Response response = given().contentType("application/json").get(baseURI);
         ExtentReports extent = new ExtentReports();
         ExtentSparkReporter spark = new ExtentSparkReporter("Report/" + "Buscar token para autenticação - Status Code " + response.getStatusCode() + ".html");
         extent.attachReporter(spark);

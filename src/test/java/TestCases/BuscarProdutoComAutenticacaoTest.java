@@ -24,12 +24,11 @@ public class BuscarProdutoComAutenticacaoTest {
                         "  \"username\": \"kminchelle\",\n" +
                         "  \"password\": \"0lelplR\"\n" +
                         "}")
-                .when()
+        .when()
                 .post("/auth/login")
 
-                .then()
-                 .extract()
-                 .path("token");
+        .then()
+                .log().all().toString();
 
         given()
                 .contentType(ContentType.JSON)
@@ -38,9 +37,9 @@ public class BuscarProdutoComAutenticacaoTest {
                 .get("/auth/products")
 
         .then()
-                .log().all();
+                .log();
 
-        Response response = given().contentType("application/json").get(baseURI+"/auth/products");
+        Response response = given().contentType("application/json").get(baseURI);
         ExtentReports extent = new ExtentReports();
         ExtentSparkReporter spark = new ExtentSparkReporter("Report/" + "Buscar produto com autenticação - Status Code " + response.getStatusCode() + ".html");
         extent.attachReporter(spark);

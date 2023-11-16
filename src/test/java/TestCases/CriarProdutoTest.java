@@ -39,7 +39,7 @@ public class CriarProdutoTest {
                 .log().all();
 
 
-        Response response = given().contentType("application/json").get(baseURI + "/products/add");
+        Response response = given().contentType("application/json").get(baseURI);
         ExtentReports extent = new ExtentReports();
         ExtentSparkReporter spark = new ExtentSparkReporter("Report/" + "Adicionar uma produto - Status Code " + response.getStatusCode() + ".html");
         extent.attachReporter(spark);

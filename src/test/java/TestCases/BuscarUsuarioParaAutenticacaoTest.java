@@ -33,7 +33,7 @@ public class BuscarUsuarioParaAutenticacaoTest {
         ExtentSparkReporter spark = new ExtentSparkReporter("Report/" + "Buscar usuario para autenticação - Status Code " + response.getStatusCode() + ".html");
         extent.attachReporter(spark);
 
-        if (response.getStatusCode() == 200) {
+        if (response.getStatusCode() == 201) {
             extent.createTest("Teste usuario para autenticação " + response.getStatusCode())
                     .log(Status.PASS, "Teste usuario para autenticação, Passed!");
             extent.flush();
