@@ -14,8 +14,8 @@ import static io.restassured.RestAssured.*;
 public class BuscarTodosOsProdutosTest {
 
     @Test
-    @DisplayName("Buscar todos produtos, apos autenticação e token")
-    public void testBuscarTodosProdutos() {
+    @DisplayName("Buscar todos produtos, apos autenticação")
+    public void testDadoUsuarioQuandoObtenhoTokenEBuscoTodosProdutosEntaoObtenhoStatusCode200() {
         baseURI = ("https://dummyjson.com");
         basePath = "";
 
