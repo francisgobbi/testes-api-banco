@@ -15,7 +15,7 @@ import static io.restassured.RestAssured.*;
 public class CriarProdutoTest {
     @Test
     @DisplayName("Testes de API Rest criar produto")
-    public void testDadoCriarProdutoEntaoObtenhoStatusCode201() {
+    public void testDadoQuandoCrioUmProdutoEntaoObtenhoStatusCode201() {
         baseURI = ("https://dummyjson.com");
         basePath = "";
 

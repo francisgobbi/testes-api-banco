@@ -14,7 +14,7 @@ import static io.restassured.RestAssured.*;
 public class BuscarStatusDaAplicacaoTest {
     @Test
     @DisplayName("Testes de API Rest buscar status da Aplicação")
-    public void testValidarABuscaPorIdEntaoObtenhoStatusCode200(){
+    public void testDadoQuandoBuscoStatusDaAplicacaoEntaoObtenhoStatusCode200(){
         baseURI = ("https://dummyjson.com/test");
         basePath = "";
 
