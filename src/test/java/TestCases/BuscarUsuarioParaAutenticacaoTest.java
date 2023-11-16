@@ -21,22 +21,19 @@ public class BuscarUsuarioParaAutenticacaoTest {
 
         given()
                 .contentType(ContentType.JSON)
-                .body("{\n" +
-                        "    \"username\": \"kminchelle\",\n" +
-                        "    \"password\": \"0lelplR\"\n" +
-                        "}")
+
         .when()
-                .post("/auth/login")
+                .get("/users")
 
         .then()
                 .log().all();
 
-        Response response = given().contentType("application/json").get(baseURI + "/auth/login");
+        Response response = given().contentType("application/json").get(baseURI + "/users");
         ExtentReports extent = new ExtentReports();
         ExtentSparkReporter spark = new ExtentSparkReporter("Report/" + "Buscar usuario para autenticação - Status Code " + response.getStatusCode() + ".html");
         extent.attachReporter(spark);
 
-        if (response.getStatusCode() == 201) {
+        if (response.getStatusCode() == 200) {
             extent.createTest("Teste usuario para autenticação " + response.getStatusCode())
                     .log(Status.PASS, "Teste usuario para autenticação, Passed!");
             extent.flush();

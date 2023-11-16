@@ -15,7 +15,7 @@ public class BuscarProdutoComAutenticacaoTest {
     @Test
     @DisplayName("Buscar Produto com Autenticação")
     public void testDadoUsuarioQuandoObtenhoTokenEBuscoPorumProdutoEntaoObtenhoStatusCode200(){
-        baseURI = ("https://dummyjson.com/");
+        baseURI = ("https://dummyjson.com");
         basePath = "";
 
         String token = given()
@@ -40,7 +40,7 @@ public class BuscarProdutoComAutenticacaoTest {
         .then()
                 .log().all();
 
-        Response response = given().contentType("application/json").get(baseURI+ "/auth/products");
+        Response response = given().contentType("application/json").get(baseURI+"/auth/products");
         ExtentReports extent = new ExtentReports();
         ExtentSparkReporter spark = new ExtentSparkReporter("Report/" + "Buscar produto com autenticação - Status Code " + response.getStatusCode() + ".html");
         extent.attachReporter(spark);
