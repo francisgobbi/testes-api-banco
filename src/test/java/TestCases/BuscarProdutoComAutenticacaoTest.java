@@ -21,8 +21,8 @@ public class BuscarProdutoComAutenticacaoTest {
         String token = given()
                 .contentType(ContentType.JSON)
                 .body("{\n" +
-                        "    \"username\": \"kminchelle\",\n" +
-                        "    \"password\": \"0lelplR\"\n" +
+                        "  \"username\": \"kminchelle\",\n" +
+                        "  \"password\": \"0lelplR\"\n" +
                         "}")
                 .when()
                 .post("/auth/login")
