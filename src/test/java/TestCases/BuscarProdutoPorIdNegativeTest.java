@@ -10,10 +10,10 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
 
-public class BuscarProdutoPorIdNegative {
+public class BuscarProdutoPorIdNegativeTest {
     @Test
     @DisplayName("Buscar Apenas Um Produto Por um Id - Negative")
-    public void testDadoUsuarioQuandoTenhoCadastradoUmProdutoEBuscoPorUmIdEntaoObtenhoStatusCode200(){
+    public void testDadoUsuarioQuandoTenhoCadastradoUmProdutoEBuscoPorUmIdEntaoObtenhoStatusCode404(){
         baseURI = ("https://dummyjson.com/products/0");
         basePath = "";
 

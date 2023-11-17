@@ -1,12 +1,12 @@
 package TestSuites;
 
 
-import TestCases.BuscarProdutoPorIdNegative;
+import TestCases.BuscarProdutoPorIdNegativeTest;
 import org.junit.platform.suite.api.SelectClasses;
 import org.junit.platform.suite.api.Suite;
 
 @Suite
-@SelectClasses({BuscarProdutoPorIdNegative.class})
+@SelectClasses({BuscarProdutoPorIdNegativeTest.class})
 public class NegativeTests {
 
 }
