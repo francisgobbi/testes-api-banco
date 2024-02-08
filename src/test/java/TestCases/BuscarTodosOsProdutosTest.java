@@ -31,12 +31,11 @@ public class BuscarTodosOsProdutosTest {
                 .then()
                     .extract()
                         .path("token");
-
+        System.out.println("Token : " + token);
 
         given()
                 .contentType(ContentType.JSON)
                 .header("Authorization",token)
-
         .when()
                 .get("auth/products")
         .then()
