@@ -1,4 +1,4 @@
-# Desafio técnico de QA para o Sicredi 
+# Testes realizados API banco 
 
 Este é um repositório que contém a automação de alguns testes de API Rest de uma aplicação com as seguintes funcionalidades:
 - #### GET /test - Buscar o status da aplicação
@@ -65,7 +65,7 @@ No teste realizado o Response - 200 OK, diferente da documentação da API.
 - O saldo atual das contas sera exibido no momento da execução.
 - Para clonar o projeto BugBank em seu computador e executar, realize estes passos abaixo :
 - - Open Git Bash here
-- - Digitar: git clone https://gitlab.com/projeto-de-teste-automatizado/desafiotecnicoqasicredi.git
+- - Digitar: git clone https://github.com/francisgobbi/testes-api-banco.git
 - -
 - - Projeto sera clonado no seu computador.
 - 
